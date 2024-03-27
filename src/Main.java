@@ -12,6 +12,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 public class Main {
+    //main class
     public static String objclass;
 
     private static final String[] armors = new String[]{"Helmetless","Cone","Bucket","",""};;
