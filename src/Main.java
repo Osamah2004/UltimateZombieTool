@@ -268,7 +268,7 @@ public class Main {
             BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(Main.class.getResourceAsStream(imagePath)));
             ImageIcon image = new ImageIcon(myPicture);
 
-            // Change the image of zombieTexture
+            // Change the image of zombieTexture.
             zombieTexture.setIcon(image);
         } catch (IOException e) {
             e.printStackTrace();
