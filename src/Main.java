@@ -263,23 +263,6 @@ public class Main {
     public static void setSpeed(String value){Speed.setTxt(value);}
     public static void setArtCenterX(int value){ArtCenterX.setTxt(String.valueOf(value));}
     public static void setArtCenterY(int value){ArtCenterY.setTxt(String.valueOf(value));}
-    /*    public static void addPhoto(JFrame frame, String imagePath, int x, int y) {
-            URL url = Main.class.getResource(imagePath);
-            if (url != null) {
-                try {
-                    BufferedImage image = ImageIO.read(url);
-                    ImageIcon icon = new ImageIcon(image);
-                    zombieTexture = new JButton(icon);
-                    zombieTexture.setBounds(x, y, icon.getIconWidth(), icon.getIconHeight());  // Set the location and size of the button
-                    zombieTexture.addActionListener(e -> new popanim());
-                    frame.getContentPane().add(zombieTexture);
-                } catch (IOException e) {
-                    System.out.println("Error reading image: " + e.getMessage());
-                }
-            } else {
-                System.out.println("Image not found");
-            }
-        }*/
     public static void changeTexture(String imagePath) {
         try {
             BufferedImage myPicture = ImageIO.read(Objects.requireNonNull(Main.class.getResourceAsStream(imagePath)));
