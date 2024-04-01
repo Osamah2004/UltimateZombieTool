@@ -118,7 +118,8 @@ public class Main {
         String zombieAction = action.toString(factor);
         String zombieType = types.toString(factor);
         String zombieProp = props.toString(factor);
-        String all = zombieType+zombieProp+zombieAction;
+        String credit = "\"#Made by the ultimate custom zombie tool\": 0,\n";
+        String all = credit+zombieType+zombieProp+zombieAction;
 
         StringSelection selection = new StringSelection(all);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
