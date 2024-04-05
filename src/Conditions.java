@@ -11,7 +11,7 @@ class Conditions extends JFrame {
             "potiontoughness2","potiontoughness3","speeddown1","speeddown2","speeddown3","potionspeed1",
             "potionspeed2","potionspeed3","potionsuper1","potionsuper2","potionsuper3","stickybombed",
             "suncarrier50","suncarrier100","suncarrier250"};
-    public int[] immunity = new int[arr.length+1];
+    public double[] immunity = new double[arr.length + 1];
 
     public Conditions() {
         int j;
@@ -92,7 +92,7 @@ class Conditions extends JFrame {
 
     public void modifyConditions() {
         for (int i = 0; i < arr.length; i++) {
-            immunity[i] = Integer.parseInt(textFields[i].getText());
+            immunity[i] = Double.parseDouble(textFields[i].getText());
         }
     }
 }
