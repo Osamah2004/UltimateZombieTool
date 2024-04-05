@@ -5,11 +5,11 @@ class Conditions extends JFrame {
     private JTextField[] textFields;
     private JLabel[] labels;
     private JButton[] buttons;
-    public String[] arr = {"chill","freeze","stun","sapped",
+    public static String[] arr = {"chill","freeze","stun","unsuspendable",
             "stalled","sapped","butter","decaypoison","shrinking","terrified","hungered",
             "shrunken","gummed","dazeystunned","stackableslow","hypnotized","potiontoughness1",
             "potiontoughness2","potiontoughness3","speeddown1","speeddown2","speeddown3","potionspeed1",
-            "potionspeed2","potionspeed3","potionsuper1","potionsuper2","potionsuper3","unsuspendable",
+            "potionspeed2","potionspeed3","potionsuper1","potionsuper2","potionsuper3","stickybombed",
             "suncarrier50","suncarrier100","suncarrier250"};
     public int[] immunity = new int[arr.length+1];
 

@@ -8,8 +8,6 @@ public class zombieProps {
     private static jsonData data = new jsonData();
     private static JSONObject objdata;
     private static JSONObject object;
-    private JSONArray array;
-    private String zombieProps;
 
     private JSONArray conditions;
     public void setCondition(String condition, double value){
@@ -22,7 +20,22 @@ public class zombieProps {
         }
     }
 
-
+    public void clear1(){
+        JSONArray condition = new JSONArray();
+        for (int i = 0; i < conditions.length(); i++) {
+            condition.put(conditions.get(i));
+        }
+        objdata.remove("ConditionImmunities");
+        for (int i = 0; i < condition.length(); i++) {
+            JSONObject o1 = condition.getJSONObject(i);
+            int num = o1.getInt("Percent");
+            if (num == 1) {
+                condition.remove(i);
+                i--;
+            }
+        }
+        objdata.put("ConditionImmunities",condition);
+    }
 
     public zombieProps(){
         setAlias();
@@ -33,7 +46,7 @@ public class zombieProps {
         JSONObject zombieStats;
         object = new JSONObject(data.getProps());
         zombieStats = object.getJSONObject("objdata");
-        this.objdata = zombieStats;
+        objdata = zombieStats;
     }
 
     public void setAlias(String alias){
@@ -103,7 +116,6 @@ public class zombieProps {
     public void setHP(double value){objdata.put("Hitpoints",value);}
     public void setSpeed(double value){objdata.put("Speed",value);}
     public void setDPS(double value){objdata.put("EatDPS",value);}
-    public JSONObject getObject(String key){return objdata.getJSONObject(key);}
     public JSONArray getArray(String key){return objdata.getJSONArray(key);}
 
     public static void clearObject(){
@@ -111,6 +123,7 @@ public class zombieProps {
     }
 
     public String toString(int factor){
+        clear1();
         object.put("objdata",objdata);
         return object.toString(factor)+",";
     }
