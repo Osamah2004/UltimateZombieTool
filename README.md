@@ -3,4 +3,4 @@ it supports basic zombies and special zombies from other worlds, yes you can edi
 you can modify hp,speed,eat dps, hitbox (AttackRect/HitRect), ConditionImmunities,JamStyle for eighties, booleans stats (can be flicked of,can be plant pushed weak, can surrender, etc....).
 no custom armor,projectiles yet, also you can't specify which zombie for troglobite's initial ice block.
 
-\nhttps://www.youtube.com/watch?v=K_uSswzpZg4
+https://www.youtube.com/watch?v=K_uSswzpZg4
